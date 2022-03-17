@@ -1,0 +1,270 @@
+body {
+   margin: 40px;
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+/* .wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   /* create 3 columns one at 380px, another at 380px and the final at 400px */
+   /* grid-template-columns: 380px 380px 400px; */
+   /* could use auto to take a column fluid */
+   /* Creating gutters essential
+   grid-gap: 20px;
+} */
+
+.box {
+   background-color: #8ea86e;
+   color: #fff;
+   border-radius: 5px;
+   padding: 20px;
+   text-align: center;
+}
+
+
+
+/* --- Repeat 1 --- */
+
+/* .wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   /* create 6 columns using repeat function, each at 180px */
+   /* grid-template-columns: repeat(6, 180px); */
+   /* could use auto to take a column fluid */
+   /* Creating gutters essential
+   grid-gap: 20px;
+} */
+
+
+
+/* --- Repeat 2 --- */
+
+/* .wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   /* create 6 columns using repeat function, each at 180px */
+   /* grid-template-columns: repeat(3, 380px);
+   grid-template-rows: 100px 400px 100px; */
+   /* could use auto to take a column fluid */
+   /* Creating gutters essential
+   grid-gap: 20px;
+} */
+
+
+
+/* --- implicit & explicit 1 --- */
+
+/* .wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   grid-template-columns: 200px 400px;  /* width */
+   /* grid-template-rows: 200px 200px;  height */
+   /* grid-gap: 20px;
+} */
+
+
+
+/* ---  implicit & explicit 2  --- */
+
+/* .wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+   grid-template-columns: 200px 400px;  /* width */
+   /* grid-template-rows: 400px;  height */
+   /* grid-gap: 20px;
+} */
+
+
+
+/* --- implicit & explicit 3 - autorow --- */
+
+/*
+.wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+   grid-template-columns: 200px 400px;  // explicit width
+   grid-template-rows: 400px;  // explicit height
+   grid-auto-rows: 400px;  // implicit height
+   grid-gap: 20px;
+}
+*/
+
+
+
+/* ---  grid auto row  --- */
+
+/*
+.wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+   grid-template-columns: 200px 400px;  / explicit width
+   grid-auto-flow: column;  / implicit elements now become columns
+   grid-gap: 20px;
+}
+*/
+
+
+
+/* ---  grid fr px  --- */
+
+/*
+.wrapper {
+   width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 20px;
+}
+*/
+
+
+/* ---  grid fr px height --- */
+
+/*
+.wrapper {
+   // note no width
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+
+   // Could hardcode height but not ideal
+   grid-template-columns: 1fr 2fr 4fr 1fr;
+   grid-template-rows: 3fr 3fr 4fr 3fr;
+   grid-template-rows: 200px 300px;
+   grid-gap: 20px;
+}
+*/
+
+
+/* ---  auto unit --- */
+
+/*
+.wrapper {
+   // note no width
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: #efefef;
+
+   display: grid;
+
+   // auto will take on the size of the largest element
+   grid-template-columns: auto 1fr 2fr 4fr;
+   grid-gap: 20px;
+}
+*/
+
+
+
+/* ---  repeat function --- */
+
+.wrapper {
+   /* note no width */
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+
+   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+   /* same as: */
+   /* 2 parameters how many times 4, what unit 1 fr */
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 20px;
+}
+
+
+
+/* ---  sizing span --- */
+
+/*
+.wrapper {
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 20px;
+}
+
+.box2 {
+
+   // Not ideal because it affects other columns
+   // browser sets this explicit width first, then gives remaining space up to fr units
+   // width: 600px;
+
+   // better to use column span
+   grid-column: span 2;
+   grid-row: span 2;
+}
+*/
+
+
+
+/* ---  placing tracks --- */
+
+/* .wrapper {
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(6, 1fr);
+   grid-gap: 20px;
+} */
+
+/* .box3 { */
+
+   /* grid-column: span 2; */
+   /* this is actually shorthand for:border:
+   grid-column-start and grid-column-end */
+   /* can use start and end to specify track numbers */
+   /* grid-column-start: 2; */
+   /* take box 3 and start it at the 2 position line */
+   /* grid-column-end: 5; */
+
+   /* Another method of shorthand */
+   /* grid-column: 2 / 5; */
+
+   /* if you don't know full width but want full with use -1 */
+   /* grid-column: 1 / -1; */
+   /* grid-row: 2 / -1; won't work, only go to bottom of explicit  */
+   /* grid-row: 2 / 5; */
+/* } */
+
+
+
+/* ---  auto-fit vs auto-fill --- */
+
+.wrapper-fill {
+   margin: 20px auto;
+   background-color: #efefef;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+   grid-gap: 20px;
+}
+
+.wrapper-fit {
+   margin: 0 auto;
+   background-color: #efefef;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   grid-gap: 20px;
+}
